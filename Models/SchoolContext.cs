@@ -1,9 +1,11 @@
 //code
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace IdentityPractice.Models
 {
-public class SchoolContext : DbContext
+public class SchoolContext : IdentityDbContext<IdentityUser>
     {
         public SchoolContext(DbContextOptions<SchoolContext> options) : base(options)
         {

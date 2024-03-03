@@ -1,4 +1,6 @@
 //code
+using System.Text.Json.Serialization;
+
 namespace IdentityPractice.Models
 {
     public class Enrollment
@@ -7,6 +9,7 @@ namespace IdentityPractice.Models
         public int StudentId { get; set; }
         public int CourseId { get; set; }
 
+        [JsonIgnore]
         public Student? Student { get; set; }
         public Course? Course { get; set; }
     }
